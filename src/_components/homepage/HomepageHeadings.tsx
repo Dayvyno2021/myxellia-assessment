@@ -30,13 +30,13 @@ const HomepageHeadings = () => {
         <p className="text-xs w-full text-center md:text-left">Showing overview Jan 2022 - Sep 2022</p>
       </div>
       <div className="h-full w-full md:w-1/2 flex flex-col justify-between items-center md:items-end py-[18px] md:px-[22px] ">
-        <button className="w-[177px] cursor-pointer shadow rounded-[72px] h-[46px] border border-gray-300 grid place-content-center hover:bg-grey transition-all ">
+        <button aria-label="View Transactions" className="w-[177px] cursor-pointer shadow rounded-[72px] h-[46px] border border-gray-300 grid place-content-center hover:bg-grey transition-all ">
           View Transactions
         </button>
         <nav className="w-[264px] flex gap-3 ">
           {
             dateObjects.map((item, i) => (
-              <button onClick={()=>activateDate(i)} key={item.name} className={`w-20 cursor-pointer transition-all h-[33px] text-sm hover:bg-grey rounded-[8px] grid place-content-center ${item.selected? 'bg-grey font-semibold shadow':'bg-white'} `}>
+              <button aria-label={item.name} onClick={()=>activateDate(i)} key={item.name} className={`w-20 cursor-pointer transition-all h-[33px] text-sm hover:bg-grey rounded-[8px] grid place-content-center ${item.selected? 'bg-grey font-semibold shadow':'bg-white'} `}>
                 {item.name}
               </button>
             ))

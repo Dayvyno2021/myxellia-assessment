@@ -47,7 +47,7 @@ const Budget = ({onClose}:{onClose:()=>void}) => {
         </div>
       </div>
       <div className="py-6 bg-white px-[47px] ">
-        <button onClick={onClose} className="w-full bg-[#18181B] font-medium text-white button__hover rounded-r-full rounded-l-full text-sm sm:text-base h-[46px] ">
+        <button aria-label='Create Budget' onClick={onClose} className="w-full bg-[#18181B] font-medium text-white button__hover rounded-r-full rounded-l-full text-sm sm:text-base h-[46px] ">
           Create Budget
         </button>
       </div>

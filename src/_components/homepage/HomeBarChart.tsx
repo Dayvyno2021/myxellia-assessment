@@ -62,6 +62,7 @@ const HomeBarChart = () => {
       {
         canScrollLeft && (
           <button
+            aria-label="Scroll left"
             onClick={() => scroll("left")}
             className=" bg-light-gray rounded-full shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer"
           >
@@ -99,6 +100,7 @@ const HomeBarChart = () => {
       {
         canScrollRight && (
           <button
+            aria-label="Scroll right"
             onClick={() => scroll("right")}
             className=" bg-light-gray rounded-full shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer "
           >

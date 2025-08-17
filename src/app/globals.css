@@ -74,3 +74,33 @@ body {
   box-shadow: 0px 0px 5px 2px var(--color-mblue);
   transition: all 0.3s;
 }
+
+@keyframes animate_in {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animate_out {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to{
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+.nav__in{
+  top: 0px;
+  animation: animate_in .3s linear;
+}
+.nav__out{
+  top: -100px;
+  animation: animate_out .3s linear;
+}
