@@ -92,8 +92,8 @@ const Header = () => {
           }
         </nav>
         <div className=" w-[80%] md:w-[60%] xl:w-[319px] h-[43px] order-1 xl:order-2 relative ">
-          <input type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] text-dark focus:outline-none focus:border-2 focus:border-mblue " />
-          <CiSearch className="absolute left-4 top-1/2 fill:dark -translate-y-1/2 text-2xl " />
+          <input type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] text-dark focus:outline-none focus:border-2 input__m focus:border-mblue " />
+          <CiSearch className="absolute left-4 top-1/2 fill-dark -translate-y-1/2 text-2xl " />
         </div>
       </div>
       <Modal isOpen={modal.isOpen} onClose={handleClose}>

@@ -57,7 +57,7 @@ const HomeBarChart = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-1/2 h-full lg:pr-10 flex justify-center gap-2 md:gap-5 items-center px-5 ">
+    <div className="w-full md:w-1/2 h-full lg:pr-10 flex justify-center gap-2 md:gap-5 items-center px-2 sm:px-5 ">
                 
       {
         canScrollLeft && (
