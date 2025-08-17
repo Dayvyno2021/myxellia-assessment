@@ -16,9 +16,9 @@ const OverviewCard: FC<Props>  = ({logoUrl, title, details}) => {
           <Image src={logoUrl} width={24} height={24} alt="Myxillia overview ratings" />
           <p className="text-sm font-medium"> {title} </p>
         </div>
-        <button aria-label='View all' className="text-mblue flex items-center gap-[2px] hover:gap-1 text-xs cursor-pointer transition-all ">
+        <button aria-label='View all' className="text-mblue flex move__right items-center gap-[2px] text-xs cursor-pointer transition-all ">
           <span>View all</span>
-          <FaAngleRight />
+          <FaAngleRight className='relative' />
         </button>
       </div>
       <div className="h-[68%] p-4 flex justify-between items-center bg-white rounded-b-[16px] ">

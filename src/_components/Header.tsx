@@ -59,10 +59,12 @@ const Header = () => {
   return (
     <header className="w-full">
       <div className="w-full z-10 fixed top-0 left-0 right-0 h-[82px] bg-dark flex items-center justify-between px-4 lg:px-[78px] ">
-        <Image src={'/images/logo.svg'} alt="Myxellia-logo" width={153.23} height={26}
-          className="w-[120px] md:w-[153.23px] "
-          priority
-        />
+        <Link href={'/'}>
+          <Image src={'/images/logo.svg'} alt="Myxellia-logo" width={153.23} height={26}
+            className="w-[120px] md:w-[153.23px] "
+            priority
+          />
+        </Link>
         <div className="flex items-center gap-2 md:gap-[25px] overflow-hidden ">
           <nav className={`flex items-center gap-1 md:gap-6 relative ${isDrawerOpen? 'nav__in':'nav__out'}`}>
             {
@@ -94,7 +96,7 @@ const Header = () => {
           }
         </nav>
         <div className=" w-[80%] md:w-[60%] xl:w-[319px] h-[43px] order-1 xl:order-2 relative ">
-          <input aria-label="Search input" type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] text-dark focus:outline-none focus:border-2 input__m focus:border-mblue " />
+          <input aria-label="Search input" type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] text-dark focus:outline-none focus:border-2 transition-all hover:border input__m hover:border-mblue focus:border-mblue " />
           <CiSearch className="absolute left-4 top-1/2 fill-dark -translate-y-1/2 text-2xl " />
         </div>
       </div>

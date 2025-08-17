@@ -105,3 +105,8 @@ body {
   top: -100px;
   animation: animate_out .3s linear;
 }
+
+.move__right:hover svg{
+  left: 3px;
+  transition: all 0.5s;
+}
