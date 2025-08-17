@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-dark: #191919;
+  --color-primary: #4545FE;
+  --color-grey: #f5f5f5;
+  --color-light-gray: #E4E4E4;
+  --color-mblue: #4545FE;
+  --color-mgreen: #12B76A;
+  --color-msky: #14B8A6;
+  --color-mred: #F04438;
+  --color-darkGrey: #3D3D3D;
+  --color-darkGrey2: #525252;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +33,39 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_items{
+  fill: white;
+  color: white;
+  cursor: pointer;
+
+}
+.nav_items:hover{
+  color: var(--color-grey);
+  transition: all 0.3;
+}
+
+.nav_items:disabled {
+  cursor: default;
+  color: var(--color-gray-400)
+}
+
+.rdp-root {
+  --rdp-day_button-height: 12px;
+  --rdp-day_button-width: 12px;
+  --rdp-day-width: 40px;
+  --rdp-day-height: 61px;
+}
+
+.rdp-day{
+  text-align: left;
+  vertical-align: text-top;
+  padding: 4px;
+}
+
+.button__hover:hover{
+  box-shadow: 0px 0px 5px 2px var(--color-mblue);
+  transition: all 0.3s;
+  cursor: pointer;
 }
