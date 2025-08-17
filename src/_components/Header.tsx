@@ -87,7 +87,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className={`w-full py-4 sm:py-5 mt-[82px] flex justify-center gap-4 px-4 bg-white 2xl:px-[78px] flex-wrap relative ${!isNavOpen && 'mb-5'}`}>
+      <div className={`w-full py-4 sm:py-5 mt-[82px] flex justify-center gap-4 px-4 bg-white 2xl:px-[78px] flex-wrap relative ${!isNavOpen && 'pb-7'}`}>
         <nav className={`flex gap-3 sm:gap-5 flex-wrap justify-center order-2 xl:order-1 overflow-hidden ${isNavOpen? 'open__nav':'close__nav'}`}>
           {
             subNavItems.map((item) => (
