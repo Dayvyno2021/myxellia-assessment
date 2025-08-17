@@ -60,7 +60,7 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full">
+    <header className="w-full bg-white">
       <div className="w-full z-10 fixed top-0 left-0 right-0 h-[82px] bg-dark flex items-center justify-between px-4 lg:px-[78px] ">
         <Link href={'/'}>
           <Image src={'/images/logo.svg'} alt="Myxellia-logo" width={153.23} height={26}
