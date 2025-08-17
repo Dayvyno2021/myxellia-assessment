@@ -64,7 +64,7 @@ const HomeBarChart = () => {
           <button
             aria-label="Scroll left"
             onClick={() => scroll("left")}
-            className=" bg-light-gray rounded-full shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer"
+            className=" bg-light-gray button__active rounded-full shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer"
           >
             <IoCaretBackOutline className="text-sm fill-dark " />
           </button>
@@ -102,7 +102,7 @@ const HomeBarChart = () => {
           <button
             aria-label="Scroll right"
             onClick={() => scroll("right")}
-            className=" bg-light-gray rounded-full shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer "
+            className=" bg-light-gray rounded-full button__active shadow-md p-2 hover:bg-gray-300 transition-all cursor-pointer "
           >
             <IoCaretForwardOutline className="text-sm fill-dark" />
           </button>
