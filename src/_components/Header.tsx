@@ -75,7 +75,7 @@ const Header = () => {
           </nav>
           <button
             aria-label="Drawer"
-            className="w-10 h-10 bg-white rounded-full text-dark grid place-content-center text-[23px] font-bold cursor-pointer "
+            className="w-10 h-10 bg-white hover:bg-grey transition-all rounded-full text-dark grid place-content-center text-[23px] font-bold cursor-pointer "
             onClick={()=>setIsDrawerOpen((val)=>!val)}
           >
             D
