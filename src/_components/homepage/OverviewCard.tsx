@@ -10,7 +10,7 @@ interface Props {
 
 const OverviewCard: FC<Props>  = ({logoUrl, title, details}) => {
   return (
-    <div className="w-[350px] sm:w-[407px] h-[152px] rounded-[16px] border border-light-gray shadow-md ">
+    <div className="w-full sm:w-[407px] h-[152px] rounded-[16px] border border-light-gray shadow-md ">
       <div className="h-[32%] bg-light-gray flex items-center justify-between rounded-t-[16px] px-4 ">
         <div className="flex gap-[10px] items-center ">
           <Image src={logoUrl} width={24} height={24} alt="Myxillia overview ratings" />

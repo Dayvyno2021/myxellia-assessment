@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import '../_styles/animation.css';
 import "./globals.css";
 import "react-day-picker/dist/style.css";
 import Header from "@/_components/Header";
