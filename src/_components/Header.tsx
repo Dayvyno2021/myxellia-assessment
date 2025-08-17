@@ -73,27 +73,27 @@ const Header = () => {
             }
           </nav>
           <button
-            className="w-10 h-10 bg-white rounded-full grid place-content-center text-[23px] font-bold cursor-pointer "
+            className="w-10 h-10 bg-white rounded-full text-dark grid place-content-center text-[23px] font-bold cursor-pointer "
             onClick={()=>setIsDrawerOpen((val)=>!val)}
           >
             D
           </button>
         </div>
       </div>
-      <div className="w-full py-2 sm:py-5 mt-[82px] flex justify-center gap-4 px-4 2xl:px-[78px] flex-wrap ">
+      <div className="w-full py-2 sm:py-5 mt-[82px] flex justify-center gap-4 px-4 bg-white 2xl:px-[78px] flex-wrap ">
         <nav className="flex gap-5 flex-wrap justify-center order-2 xl:order-1 ">
           {
             subNavItems.map((item) => (
-              <Link href={item.route} key={item.name} className={`w-[170px] py-[7px] transition-all hover:bg-grey flex items-center px-[25px] rounded-[8px] gap-2 ${pathname === item.route? 'bg-grey':''}`}>
-                <span className="inline-block"> {item.img} </span>
+              <Link href={item.route} key={item.name} className={`w-[170px] py-[7px] transition-all hover:bg-grey flex items-center px-[25px] rounded-[8px] gap-2 text-dark ${pathname === item.route? 'bg-grey':''}`}>
+                <span className={`inline-block `}> {item.img} </span>
                 <span className="inline-block"> {item.name} </span>
               </Link>
             ))
           }
         </nav>
         <div className=" w-[80%] md:w-[60%] xl:w-[319px] h-[43px] order-1 xl:order-2 relative ">
-          <input type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] focus:outline-none focus:border focus:border-mblue " />
-          <CiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl " />
+          <input type="search" className="py-[9.5px] pl-12 pr-4 w-full h-[43px] bg-grey rounded-[12px] text-dark focus:outline-none focus:border-2 focus:border-mblue " />
+          <CiSearch className="absolute left-4 top-1/2 fill:dark -translate-y-1/2 text-2xl " />
         </div>
       </div>
       <Modal isOpen={modal.isOpen} onClose={handleClose}>
@@ -106,7 +106,7 @@ const Header = () => {
               modal.active === HeadTitle.budget ? (
              <Budget onClose={handleClose} />
               ) : (
-                   <p className="text-mred">The active Header is {modal.active}</p>
+                <p className="text-mred">The active Header is {modal.active}</p>
              )
           )
         }

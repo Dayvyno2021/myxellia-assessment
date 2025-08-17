@@ -29,7 +29,7 @@ const Modal:FC<Props> = ({isOpen, onClose, children}) => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="max-w-lg space-y-4 bg-black py-12 px-6"
+                className="max-w-lg space-y-4 bg-black py-12 px-6 text-dark"
               >
                 <div className="w-full"> {children} </div>
               </DialogPanel>
