@@ -98,7 +98,7 @@ const Header = () => {
             ))
           }
         </nav>
-        <button onClick={()=>setIsNavOpen((val)=>!val)} className="bg-grey shadow-md rounded-full p-2 absolute top-14 right-2 spmd:hidden ">
+        <button onClick={()=>setIsNavOpen((val)=>!val)} className="bg-mblue/30 button__hover shadow-md rounded-full p-2 absolute top-14 right-2 spmd:hidden ">
           {
             isNavOpen?  (<BsChevronBarContract />): (<FaAngleDoubleDown />)
           }
