@@ -30,7 +30,7 @@ const HomepageHeadings = () => {
         <p className="text-xs w-full text-center md:text-left">Showing overview Jan 2022 - Sep 2022</p>
       </div>
       <div className="h-full w-full md:w-1/2 flex flex-col justify-between items-center md:items-end py-[18px] md:px-[22px] ">
-        <button aria-label="View Transactions" className="w-[177px] text-xs cursor-pointer shadow rounded-[72px] h-[46px] border border-gray-300 grid place-content-center hover:bg-grey transition-all ">
+        <button aria-label="View Transactions" className="w-[177px] text-xs cursor-pointer shadow rounded-[72px] h-[46px] border border-gray-300 grid place-content-center hover:bg-grey transition-all button__active ">
           View Transactions
         </button>
         <nav className="w-[264px] flex gap-3 ">
