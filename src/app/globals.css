@@ -20,6 +20,7 @@
   --color-mred: #F04438;
   --color-darkGrey: #3D3D3D;
   --color-darkGrey2: #525252;
+  --breakpoint-2xl: 90rem;
 }
 
 @media (prefers-color-scheme: dark) {
