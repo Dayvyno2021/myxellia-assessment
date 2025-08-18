@@ -100,7 +100,7 @@ const Header = () => {
         </nav>
         <button onClick={()=>setIsNavOpen((val)=>!val)} className="bg-mblue/30 button__active shadow-md rounded-full p-2 absolute top-14 right-2 spmd:hidden ">
           {
-            isNavOpen?  (<BsChevronBarContract />): (<FaAngleDoubleDown />)
+            isNavOpen? (<BsChevronBarContract className="fill-dark" />):(<FaAngleDoubleDown className="fill-dark" />)
           }
         </button>
         <div className=" w-[80%] md:w-[60%] xl:w-[319px] h-[43px] order-1 xl:order-2 relative ">
