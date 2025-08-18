@@ -10,7 +10,7 @@ import { PiScroll } from "react-icons/pi";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+import { memo, useState } from "react";
 import Modal from "./Modal";
 import CalendarComponent from "./CalendarComponent";
 import Budget from "./Budget";
@@ -127,4 +127,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default memo(Header);

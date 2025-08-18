@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { memo, useState } from "react";
 
 const initialVals = [
   {name:'1 Week', selected:false},
@@ -47,4 +47,4 @@ const HomepageHeadings = () => {
   )
 }
 
-export default HomepageHeadings
+export default memo(HomepageHeadings);

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Image from 'next/image';
 import { VscSettings } from "react-icons/vsc";
 import { IoMdTrendingUp } from "react-icons/io";
@@ -27,7 +28,7 @@ const Budget = ({onClose}:{onClose:()=>void}) => {
       <div className="bg-[#0c2841] ">
         <Image src={'/images/budgetHero.png'} alt='Budget' width={438} height={261} className='w-full' />
       </div>
-      <div className="bg-white pt-6 flex justify-center">
+      <div className="bg-white pt-6 flex justify-center ">
         <div className="w-[330px] sm:w-[344px] flex flex-col gap-[23px] ">
           {
             budgetDetails.map((detail) => (
@@ -46,7 +47,7 @@ const Budget = ({onClose}:{onClose:()=>void}) => {
           }
         </div>
       </div>
-      <div className="py-6 bg-white px-[47px] ">
+      <div className="py-6 bg-white px-[47px] rounded-b-[10px]">
         <button aria-label='Create Budget' onClick={onClose} className="w-full bg-[#18181B] font-medium text-white button__hover button__active rounded-r-full rounded-l-full text-sm sm:text-base h-[46px] ">
           Create Budget
         </button>
@@ -55,4 +56,4 @@ const Budget = ({onClose}:{onClose:()=>void}) => {
   )
 }
 
-export default Budget
+export default memo(Budget)

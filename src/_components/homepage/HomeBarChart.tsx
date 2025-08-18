@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { IoCaretBackOutline, IoCaretForwardOutline } from "react-icons/io5";
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, } from 'recharts';
 
@@ -113,4 +113,4 @@ const HomeBarChart = () => {
   );
 };
 
-export default HomeBarChart;
+export default memo(HomeBarChart);

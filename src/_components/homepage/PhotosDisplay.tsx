@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Image from "next/image";
 
 const photos = [
@@ -14,7 +15,7 @@ const PhotosDisplay = () => {
       {
         photos.map((item) => (
           <Image key={item} src={item} alt={item} width={418} height={286}
-            className="w-full"
+            className="w-full shadow-md rounded-xl "
           />
         ))
       }
@@ -23,4 +24,4 @@ const PhotosDisplay = () => {
   )
 }
 
-export default PhotosDisplay
+export default memo(PhotosDisplay);

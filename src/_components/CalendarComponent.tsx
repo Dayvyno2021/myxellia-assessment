@@ -1,6 +1,6 @@
 "use client";
 
-import {FC, useState} from "react";
+import {FC, memo, useState} from "react";
 import { DayPicker } from "react-day-picker";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
@@ -43,4 +43,4 @@ const CalendarComponent: FC<Props> = ({onClose}) => {
   );
 }
 
-export default CalendarComponent;
+export default memo(CalendarComponent);

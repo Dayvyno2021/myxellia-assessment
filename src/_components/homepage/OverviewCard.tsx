@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import Image from 'next/image'
 import { FaAngleRight } from 'react-icons/fa6';
 
@@ -36,4 +36,4 @@ const OverviewCard: FC<Props>  = ({logoUrl, title, details}) => {
   )
 }
 
-export default OverviewCard
+export default memo(OverviewCard);
