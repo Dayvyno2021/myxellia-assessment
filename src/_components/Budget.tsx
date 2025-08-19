@@ -1,5 +1,5 @@
 'use client';
-import { KeyboardEvent, memo } from 'react';
+import { memo } from 'react';
 import Image from 'next/image';
 import { VscSettings } from "react-icons/vsc";
 import { IoMdTrendingUp } from "react-icons/io";

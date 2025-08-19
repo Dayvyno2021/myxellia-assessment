@@ -126,7 +126,7 @@ const Header = () => {
              <Budget onClose={controlModal} />
               ) : (
                   modal.active === HeadTitle.drawer ? (
-                    <DrawalComponent />
+                    <DrawalComponent onClose={controlModal} />
                   ): (
                     <p className="text-mred">The active Header is {modal.active}</p>
                 )
