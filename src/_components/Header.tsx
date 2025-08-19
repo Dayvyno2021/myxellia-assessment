@@ -16,12 +16,14 @@ import CalendarComponent from "./CalendarComponent";
 import Budget from "./Budget";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { BsChevronBarContract } from "react-icons/bs";
+import DrawalComponent from "./DrawalComponent";
 
 enum HeadTitle{
   calendar = 'Calendar',
-  budget = 'Budget',
+  budget = 'Budgeting',
   notification = 'Notification',
-  messages = 'Messages'
+  messages = 'Messages',
+  drawer = 'Drawer'
 }
 
 const headerNavItems = [
@@ -47,16 +49,14 @@ interface ModalControlType{
 const Header = () => {
   const pathname = usePathname();
 
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [modal, setModal] = useState<ModalControlType>({ isOpen: false, active: null });
   const [isNavOpen, setIsNavOpen] = useState(true);
 
-  const handleClose = (heading?: HeadTitle) => {
+  const controlModal = (heading?: HeadTitle) => {
     if (heading) {
       return setModal((val) => ({active: heading, isOpen: !val.isOpen }));
     }
     setModal((val) => ({ isOpen: !val.isOpen, active: null }));
-
   }
 
   return (
@@ -68,22 +68,29 @@ const Header = () => {
             priority
           />
         </Link>
-        <div className="flex items-center gap-2 md:gap-[25px] overflow-hidden ">
-          <nav className={`flex items-center gap-1 md:gap-6 relative ${isDrawerOpen? 'nav__in':'nav__out'}`}>
+        <div className="flex items-center gap-2 md:gap-[25px] ">
+          <nav className={`flex items-center gap-1 md:gap-6 relative`}>
             {
                headerNavItems.map((item) => (
-                <button aria-label={item.name} onClick={()=>handleClose(item.name)} key={item.name} disabled={item.isDisabled} className="w-8 h-8 grid place-content-center nav_items">
+                <button aria-label={item.name} onClick={()=>controlModal(item.name)} key={item.name} disabled={item.isDisabled} className="w-8 h-8 relative grid place-content-center nav_items">
                   {item.img}
+                  <span className={`absolute text-[10px] -bottom-8 px-2 py-1 transition-all left-1/2 -translate-x-1/2 bg-black text-white rounded ${item.isDisabled? '':'span-item'}`}>
+                    {item.name}
+                  </span>
                 </button>
               ))
             }
           </nav>
           <button
             aria-label="Drawer"
-            className="w-10 h-10 bg-white hover:bg-grey transition-all rounded-full text-dark grid place-content-center text-[23px] font-bold cursor-pointer "
-            onClick={()=>setIsDrawerOpen((val)=>!val)}
+            onClick={()=>controlModal(HeadTitle.drawer)}
+            className="drawer w-10 h-10 bg-white hover:bg-grey transition-all rounded-full grid place-content-center text-[23px] font-bold cursor-pointer relative"
           >
-            D
+            <span className="text-dark">D</span>
+            <span className="absolute bg-grey flex rounded-md flex-col span-item -bottom-[54px] items-start right-0 px-2 py-1">
+              <span className="font-bold text-sm flex justify-start text-dark">David</span>
+              <span className="text-sm font-normal flex justify-start text-gray-500">dayvynomern2021@gmail.com</span>
+            </span>
           </button>
         </div>
       </div>
@@ -108,17 +115,21 @@ const Header = () => {
           <CiSearch className="absolute left-4 top-1/2 fill-dark -translate-y-1/2 text-2xl " />
         </div>
       </div>
-      <Modal isOpen={modal.isOpen} onClose={handleClose}>
+      <Modal styles={modal.active === HeadTitle.budget? 'justify-center lg:mt-10':'justify-end'} isOpen={modal.isOpen} onClose={controlModal}>
         {
           modal.active === HeadTitle.calendar ? (
             <CalendarComponent
-              onClose={handleClose}
+              onClose={controlModal}
             />
           ) : (
               modal.active === HeadTitle.budget ? (
-             <Budget onClose={handleClose} />
+             <Budget onClose={controlModal} />
               ) : (
-                <p className="text-mred">The active Header is {modal.active}</p>
+                  modal.active === HeadTitle.drawer ? (
+                    <DrawalComponent />
+                  ): (
+                    <p className="text-mred">The active Header is {modal.active}</p>
+                )
              )
           )
         }

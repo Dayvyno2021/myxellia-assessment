@@ -13,7 +13,7 @@ const CalendarComponent: FC<Props> = ({onClose}) => {
   const [selected, setSelected] = useState<Date | undefined>(new Date());
 
   return (
-    <div className="bg-black text-white py-4 rounded-lg w-full justify-center flex flex-col gap-5 ">
+    <div className="bg-black text-white p-4 rounded-lg w-full justify-center flex flex-col gap-5 ">
       <div className=" h-[50px] flex items-center w-full justify-between ">
         <p className="flex text-white gap-2 font-semibold items-center">
           <MdKeyboardBackspace className="fill-white" />

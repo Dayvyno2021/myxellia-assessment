@@ -45,7 +45,16 @@ body {
 }
 .nav_items:hover{
   color: var(--color-grey);
-  transition: all 0.3;
+  transition: all 0.3s;
+}
+
+.nav_items span, .drawer .span-item{
+  display: none;
+}
+
+.nav_items:hover .span-item, .drawer:hover .span-item{
+  transition: all .3s;
+  display: block;
 }
 
 .nav_items:disabled {

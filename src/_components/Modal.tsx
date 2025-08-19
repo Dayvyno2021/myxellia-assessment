@@ -7,10 +7,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 interface Props{
   isOpen: boolean,
   onClose: () => void,
-  children: ReactNode
+  children: ReactNode,
+  styles: string
 }
 
-const Modal:FC<Props> = ({isOpen, onClose, children}) => {
+const Modal:FC<Props> = ({isOpen, onClose, children, styles}) => {
 
   return (
     <>
@@ -23,15 +24,15 @@ const Modal:FC<Props> = ({isOpen, onClose, children}) => {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50"
             />
-            <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+            <div className={` fixed inset-0 flex w-screen items-start mt-20 ${styles}`}>
               <DialogPanel
                 as={motion.div}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="max-w-lg space-y-4 bg-black py-12 px-6 text-dark"
+                className="max-w-lg space-y-4 text-dark"
               >
-                <div className="w-full"> {children} </div>
+                {children}
               </DialogPanel>
             </div>
           </Dialog>
